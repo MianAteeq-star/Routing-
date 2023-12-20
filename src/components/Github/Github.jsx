@@ -3,15 +3,15 @@ import { useLoaderData } from 'react-router-dom'
 
 export default function Github() {
 
-    const data = useLoaderData()
-    console.log(data);
-//     const [data,setData]= useState({})
-// useEffect(()=>{
-//   fetch("https://api.github.com/users/MianAteeq-star")
-//   .then((res)=> res.json())
-//   .then((data) => setData(data))
-//   console.log(data);
-// },[])
+    // const data = useLoaderData()
+    // console.log(data);
+    const [data,setData]= useState({})
+useEffect(()=>{
+  fetch("https://api.github.com/users/MianAteeq-star")
+  .then((res)=> res.json())
+  .then((data) => setData(data))
+  console.log(data);
+},[])
 
   return (
     <>
@@ -26,7 +26,7 @@ export default function Github() {
 }
 
 
-export const  GithubInfo= async()=>{
- const res = await fetch("https://api.github.com/users/MianAteeq-star")
-return res.json()
-}
+// export const  GithubInfo= async()=>{
+//  const res = await fetch("https://api.github.com/users/MianAteeq-star")
+// return res.json()
+// }
